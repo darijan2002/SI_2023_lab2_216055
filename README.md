@@ -20,7 +20,7 @@
 
 ## Тест случаи според *Every Branch* критериумот
 
-|Ребро|`user=null, allUsers=null`|`user=User("darijansekerov", "darijansekerov!", "darijan@sekerov.com"), allUsers={user}`|`user=User("darijan", "sekerov@", "darijan@sekerov.com"), allUsers={}`| `user=User(null, "sekerov asd", "darijan@sekerov.com"), allUsers={User("darijan@sekerov.com", "sekerov asd", "darijan@sekerov.com")}`|`user=User(null, "sekerov asd", "darijan@sekerov.com"), allUsers={User("darijan@sekerov.com", "sekerov asd", "darijan@sekerov.com")}`|
+|Ребро|`user=null, allUsers=null`|`user=User("darijansekerov", "darijansekerov!", "darijansekerov.com"), allUsers={user}`|`user=User("darijan", "sekerov@", "darijan@sekerov.com"), allUsers={}`| `user=User(null, "sekerov asd", "darijan@sekerov.com"), allUsers={User("darijan@sekerov.com", "sekerov asd", "darijan@sekerov.com")}`|`user=User(null, "sekerov asd", "darijan@sekerov.com"), allUsers={User("darijan456@sekerov.com", "sekerov asd", "darijan123@sekerov.com")}`|
 |---|-:|-:|-:|-:|-:|
 |1-2|\*||
 |1-3||\*|\*|\*|\*|
