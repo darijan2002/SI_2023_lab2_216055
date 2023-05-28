@@ -67,6 +67,22 @@
 
 `user=User(null, "sekerov asd", "darijan@sekerov.com"), allUsers={User("darijan456@sekerov.com", "sekerov asd", "darijan123@sekerov.com")}` - корисникот нема корисничко име и има невалидна лозинка, но е различен со корисникот во листата
 
+```java
+assertThrows(RuntimeException.class, () -> SILab2.function(null, null));
+
+User u = new User("darijansekerov", "darijansekerov!", "darijansekerov.com");
+assertFalse(SILab2.function(u, Arrays.asList(u)));
+
+User u2 = new User("darijan", "sekerov@", "darijan@sekerov.com");
+assertTrue(SILab2.function(u2, Arrays.asList()));
+
+User u3 = new User(null, "sekerov asd", "darijan@sekerov.com");
+assertFalse(SILab2.function(u3, Arrays.asList(new User("darijan@sekerov.com", "sekerov asd", "darijan@sekerov.com"))));
+
+User u4 = new User(null, "sekerov asd", "darijan@sekerov.com");
+assertFalse(SILab2.function(u4, Arrays.asList(new User("darijan456@sekerov.com", "sekerov asd", "darijan123@sekerov.com"))));
+```
+
 ## Тест случаи според *Multiple Condition* критериумот
 
 `if (user==null || user.getPassword()==null || user.getEmail()==null)`
